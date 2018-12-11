@@ -19,9 +19,6 @@ discovery.zen.ping.unicast.hosts: "localhost:9301"
 http.port: 9201
 {% endif %}
 
-{% if es_config['transport.tcp.port'] is not defined %}
-http.port: 9301
-{% endif %}
 
 {% if es_config['node.data'] is not defined %}
 http.port: false
